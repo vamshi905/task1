@@ -82,8 +82,7 @@ class Service extends Controller
   }
   public function details(string $id)
   {
-     $token=Auth::user();
-     if($token){
+    
       $user=Questionnaire::where('id',$id)->get();
     if(count($user)>0){
     return response()->json([
@@ -96,10 +95,6 @@ class Service extends Controller
       'status'=>'data not found'
     ]);
   }
-}
-else{
-  return "un";
-}
   
   }
   public function logout(Request $request)
