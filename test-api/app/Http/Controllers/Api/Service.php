@@ -17,7 +17,8 @@ class Service extends Controller
   public function register(Request $request)
   {
 
-
+    // Testing git push
+    
     $validator = Validator::make($request->all(), [
       'name' => 'required',
       'email' => 'required|email',
